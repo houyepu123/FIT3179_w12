@@ -1,0 +1,62 @@
+body *{
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-weight: 900;
+}
+
+body {
+    background-color: lightgray;
+}
+
+.page {
+    width: 850px;
+    background-color: white;
+    margin: auto;
+    padding: 50px;
+    padding-top: 35px;
+}
+
+/* In your styles.css or embedded styles */
+
+.vis-container {
+    width: 100%;
+    height: 300px;  /* Adjust this height as needed */
+}
+
+
+.description h2,
+h1 {
+    margin-top: 0px;
+}
+
+.description-right {
+    padding-left: 20px;
+}
+
+.description-left {
+    padding-right: 20px;
+}
+
+.pure-g {
+    margin-bottom: 40px;
+}
+
+.small-font {
+    font-size: 14px;
+}
+
+
+    h1 {
+        text-align: center; /* Centers the title */
+    }
+
+    p {
+        text-align: center; /* Centers the title */
+    }
+
+    .highlight {
+        color: rgb(33, 131, 160); /* Highlights important words with a yellow background */
+        font-weight: bold; /* Makes the highlighted words bold */
+    }

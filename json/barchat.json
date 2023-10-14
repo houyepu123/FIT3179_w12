@@ -1,0 +1,81 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "hconcat": [
+        {
+            "data": {
+                "url": "../csv/co2-emissions-vs-gdp_filter_2.csv"
+            },
+            "transform": [
+                {
+                    "sort": [{"field": "GDP per capita", "order": "descending"}],
+                    "window": [{"op": "row_number", "as": "rank"}],
+                    "frame": [null, null]
+                },
+                {
+                    "filter": "datum.rank <= 10"
+                }
+            ],
+            "mark": "bar",
+            "encoding": {
+                "y": {
+                    "field": "Entity",
+                    "type": "ordinal",
+                    "sort": "-x",
+                    "title": "Country"
+                },
+                "x": {
+                    "field": "GDP per capita",
+                    "type": "quantitative",
+                    "title": "GDP per capita"
+                },
+                "tooltip": [
+                    {"field": "Entity", "type": "nominal"},
+                    {"field": "GDP per capita", "type": "quantitative"}
+                ]
+            },
+            "title": "Top 10 Countries by GDP per capita"
+        },
+        {
+            "data": {
+                "url": "../csv/co2-emissions-vs-gdp_filter_2.csv"
+            },
+            "transform": [
+                {
+                    "sort": [{"field": "Annual CO₂ emissions (per capita)", "order": "descending"}],
+                    "window": [{"op": "row_number", "as": "rank"}],
+                    "frame": [null, null]
+                },
+                {
+                    "filter": "datum.rank <= 10"
+                }
+            ],
+            "mark": "bar",
+            "encoding": {
+                "y": {
+                    "field": "Entity",
+                    "type": "ordinal",
+                    "sort": "-x",
+                    "title": "Country"
+                },
+                "x": {
+                    "field": "Annual CO₂ emissions (per capita)",
+                    "type": "quantitative",
+                    "title": "CO₂ emissions (per capita)"
+                },
+                "tooltip": [
+                    {"field": "Entity", "type": "nominal"},
+                    {"field": "Annual CO₂ emissions (per capita)", "type": "quantitative"}
+                ]
+            },
+            "title": "Top 10 Countries by CO₂ emissions (per capita)"
+        }
+    ],
+    "config": {
+        "view": {
+            "stroke": "transparent"
+        },
+        "axis": {
+            "domainWidth": 1
+        }
+    }
+}

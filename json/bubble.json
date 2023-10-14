@@ -1,0 +1,82 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 340,
+  "height": 450,
+  "title": "GDP vs CO2 Emissions for 2018",
+  "data": {
+    "url": "../csv/co2-emissions-vs-gdp_filter_2.csv"
+  },
+  "transform": [
+    {
+      "calculate": "0", 
+      "as": "minimumPopulation"
+    }
+  ],
+  "params": [
+    {
+      "name": "populationThreshold",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 100000000,
+        "step": 1000000,
+        "name": "Minimum Population"
+      }
+    }
+  ],
+  "layer": [
+    {
+      "transform": [
+        {
+          "filter": "datum['Population (historical estimates)'] > populationThreshold"
+        }
+      ],
+      "mark": "circle",
+      "encoding": {
+        "x": {
+          "field": "GDP per capita",
+          "type": "quantitative",
+          "title": "GDP per capita",
+          "scale": {"type": "log"},
+          "axis": {"grid": false}
+        },
+        "y": {
+          "field": "Annual CO₂ emissions (per capita)",
+          "type": "quantitative",
+          "title": "CO2 Emissions",
+          "scale": {"type": "log"},
+          "axis": {"grid": false}
+        },
+        "size": {
+          "field": "Population (historical estimates)",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {"field": "GDP per capita", "type": "quantitative"},
+          {"field": "Annual CO₂ emissions (per capita)", "type": "quantitative"},
+          {"field": "Population (historical estimates)", "type": "quantitative"}
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.Entity === 'Australia' || datum.Entity === 'China'"
+        }
+      ],
+      "mark": "text",
+      "encoding": {
+        "x": {"field": "GDP per capita", "type": "quantitative"},
+        "y": {"field": "Annual CO₂ emissions (per capita)", "type": "quantitative"},
+        "text": {"field": "Entity", "type": "nominal"}
+      }
+    }
+  ]
+}
+
+
+
+
+
+

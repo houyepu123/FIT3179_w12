@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Multiple Visualisations | An Example</title>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+
+
+</head>
+
+<body>
+
+  <div class="page">
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <h1>CO2 vs GDP analysis in different countries</h1>
+        <p>Our data visualization suite provides a detailed perspective on the <span class="highlight">intricate relationship between a nation's economic prosperity and its ecological footprint</span>. Central to our presentation is a <span class="highlight">vivid choropleth map detailing GDP per capita worldwide</span>, offering insights into regional economic disparities. Augmenting this, our scatter plots <span class="highlight">meticulously chart the direct ties between GDP growth and rising CO₂ emissions</span>. By spotlighting top economic powerhouses, we delve into their pivotal role in global carbon dynamics. In essence, these visual tools underscore the <span class="highlight">ongoing challenge nations face: harmonizing economic ascent with environmental preservation for a sustainable future</span>.</p>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <!-- Description Container -->
+      <div class="pure-u-1-1">
+          <div class="description description-left">
+              <h2>Choropleth map of CO2 emission and countries</h2>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae dolores animi beatae vitae atque fugit voluptas expedita ipsa iusto culpa aspernatur, omnis impedit doloremque ducimus vero asperiores molestiae non obcaecati.</p>
+          </div>
+      </div>
+      <!-- Visualization (Map) Container -->
+      <div class="pure-u-1-1">
+        <div id="vis1" class="vis-container"></div>
+    </div>
+  
+  </div>
+     <!-- pure grid group -->
+     <div class="pure-g">
+      <!-- Description Container -->
+      <div class="pure-u-1-1">
+          <div class="description description-left">
+              <h2>Bubble plot of GDP vs CO2 Emissions of 2018</h2>
+              <p>The <span class="highlight">bubble plot</span> illustrating <span class="highlight">GDP versus CO₂ emissions</span> provides a compelling visual insight into the economic and environmental dynamics of nations. Each bubble's size is indicative of the population, offering a third dimension to the data. While numerous countries display varying degrees of economic growth and carbon outputs, one country stands prominently: <span class="highlight">China</span>. With its meteoric economic rise, China not only showcases one of the highest GDPs but also tops the chart in CO₂ emissions, underscoring the challenges and responsibilities it faces in the global effort toward sustainable development.</p>
+          </div>
+      </div>
+      <!-- Visualization (Map) Container -->
+      <div class="pure-u-1-1">
+        <div id="vis2" class="vis-container"></div>
+    </div>
+
+     <!-- pure grid group -->
+     <div class="pure-g">
+      <!-- Description Container -->
+      <div class="pure-u-1-1">
+          <div class="description description-left">
+              <h2>Bar chart of top 10 countries by GDP per capita and by CO2 emissions per capita</h2>
+              <p>The bar chart, meticulously delineating GDP across various nations, offers a clear visual representation of economic disparities. Each bar's height corresponds to the GDP, providing an instant comparative perspective. Among the array of countries showcased, two distinctly stand out. <span class="highlight">Norway</span> soars with the tallest bar, signifying its unmatched GDP and economic prowess in this dataset. Parallelly, in a category ranking countries, the <span class="highlight">Netherlands</span> emerges as the front-runner, its prominence highlighted by its towering bar. This visualization not only emphasizes the economic achievements of these nations but also underscores the diverse economic landscapes across the globe.</p>
+          </div>
+      </div>
+      <!-- Visualization (Map) Container -->
+      <div class="pure-u-1-1">
+        <div id="vis3" class="vis-container"></div>
+    </div>
+
+     <!-- pure grid group -->
+     <div class="pure-g">
+      <!-- Description Container -->
+      <div class="pure-u-1-1">
+          <div class="description description-left">
+              <h2>Scatter plot of GDP per capita vs Annual CO2 emissions per capita </h2>
+              <p>The scatter plot provides an insightful visualization of GDP per capita against Annual CO₂ emission for various nations. Each data point represents a country, with its position determined by its economic standing and environmental impact. Notably, <span class="highlight">Qatar</span> emerges as a distinct outlier. It boasts the highest GDP per capita, demonstrating its significant economic stature. However, this economic prosperity comes at a price, as Qatar also leads in Annual CO₂ emission, highlighting the environmental challenges accompanying its wealth.</p>
+          </div>
+      </div>
+      <!-- Visualization (Map) Container -->
+      <div class="pure-u-1-1">
+        <div id="vis4" class="vis-container"></div>
+    </div>
+
+
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <!-- <div class="pure-g">
+      <div class="pure-u-1-3">
+        <div class="description description-left">
+          <h2>Three Equal Columns</h2>
+          <p>Using all three columns without merging. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat
+            sed. Egestas purus viverra accumsan in nisl. Egestas purus viverra accumsan in nisl.</p>
+        </div>
+      </div>
+      <div class="pure-u-1-3">
+        <div id="vis4" class="vis-container"></div>
+      </div>
+      <div class="pure-u-1-3" style="width: 31.5%;">
+        <div id="vis3" class="vis-container" style="margin-left: 15px;"></div>
+      </div>
+
+    </div> -->
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <!-- <div class="pure-g">
+      <div class="pure-u-2-3">
+        <div id="vis2" class="vis-container"></div>
+      </div>
+      <div class="pure-u-1-3">
+        <div class="description description-right">
+          <h2>First and Second Columns Combined</h2>
+          <p>The first and second columns are combined. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien
+            faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
+        </div>
+      </div>
+
+    </div> -->
+    <!-- end pure grid group -->
+
+  </div> <!-- end page -->
+
+  <script type="text/javascript">
+    // Fetch and render the visualization from vega_lite.json
+    fetch('./choropleth_map.json')
+    .then(response => response.json())
+    .then(spec => {
+        vegaEmbed('#vis1', spec, { "actions": false });
+    })
+    .catch(error => {
+        console.error("Error loading vega_lite.json:", error);
+    });
+
+    // Fetch and render the visualization from data.json
+    fetch('./data.json')
+    .then(response => response.json())
+    .then(spec => {
+        vegaEmbed('#vis2', spec, { "actions": false });
+    })
+    .catch(error => {
+        console.error("Error loading data.json:", error);
+    });
+
+    // Fetch and render the visualization from data.json
+    fetch('./barchat.json')
+    .then(response => response.json())
+    .then(spec => {
+        vegaEmbed('#vis3', spec, { "actions": false });
+    })
+    .catch(error => {
+        console.error("Error loading data.json:", error);
+    });
+
+    // Fetch and render the visualization from data.json
+    fetch('./scatter.json')
+    .then(response => response.json())
+    .then(spec => {
+        vegaEmbed('#vis4', spec, { "actions": false });
+    })
+    .catch(error => {
+        console.error("Error loading data.json:", error);
+    });
+
+
+  </script>
+</body>
+
+</html>
