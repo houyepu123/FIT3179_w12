@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 420,
+    "width": 360,
     "height": 300,
-    "description": "Scatter plot of Annual CO₂ emissions (per capita) vs. GDP per capita for various countries in 2018",
+    "description": "Annual CO₂ emissions (per capita) vs. GDP per capita for various countries in 2021",
     "data": {
       "url": "../csv/cleaned_data.csv"
     },

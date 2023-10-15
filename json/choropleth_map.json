@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Annual CO2 emissions (per capita) - 2023",
-  "width": 600,
+  "title": "Annual CO2 emissions (per capita) - 2021",
+  "width": 700,
   "height": 400,
   "projection": {"type": "equalEarth"},
   "layer": [

@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 225,
+  "width": 170,
   "height": 300,
-  "title": "GDP vs CO2 Emissions for 2018",
+  "title": "GDP vs CO2 Emissions for 2021",
   "data": {
     "url": "../csv/cleaned_data.csv"
   },
