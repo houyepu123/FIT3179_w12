@@ -15,6 +15,9 @@
             "as": "Year_int"
         },
         {
+            "filter": "datum.Year_int >= 1800"
+        },
+        {
             "aggregate": [
                 {
                     "op": "sum",
