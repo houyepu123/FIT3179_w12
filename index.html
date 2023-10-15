@@ -131,7 +131,7 @@
 
   <script type="text/javascript">
     // Fetch and render the visualization from vega_lite.json
-    fetch('./json/choropleth_map.json')
+    fetch('choropleth_map.json')
     .then(response => response.json())
     .then(spec => {
         vegaEmbed('#vis1', spec, { "actions": false });
@@ -141,7 +141,7 @@
     });
 
     // Fetch and render the visualization from data.json
-    fetch('./json/bubble.json')
+    fetch('bubble.json')
     .then(response => response.json())
     .then(spec => {
         vegaEmbed('#vis2', spec, { "actions": false });
@@ -151,7 +151,7 @@
     });
 
     // Fetch and render the visualization from data.json
-    fetch('./json/barchat.json')
+    fetch('barchat.json')
     .then(response => response.json())
     .then(spec => {
         vegaEmbed('#vis3', spec, { "actions": false });
@@ -161,7 +161,7 @@
     });
 
     // Fetch and render the visualization from data.json
-    fetch('./json/scatter.json')
+    fetch('scatter.json')
     .then(response => response.json())
     .then(spec => {
         vegaEmbed('#vis4', spec, { "actions": false });
@@ -171,7 +171,7 @@
     });
 
      // Fetch and render the visualization from data.json
-     fetch('./json/line_graph.json')
+     fetch('line_graph.json')
     .then(response => response.json())
     .then(spec => {
         vegaEmbed('#vis5', spec, { "actions": false });

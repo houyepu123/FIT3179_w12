@@ -1,0 +1,58 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Global Annual CO₂ Emissions Over Time",
+    "width": 350,
+    "height": 300,
+    "data": {
+        "url": "annual-co2-emissions-per-country.csv",
+        "format": {
+            "type": "csv"
+        }
+    },
+    "transform": [
+        {
+            "calculate": "datum.Year * 1",
+            "as": "Year_int"
+        },
+        {
+            "filter": "datum.Year_int >= 1800"
+        },
+        {
+            "aggregate": [
+                {
+                    "op": "sum",
+                    "field": "Annual CO₂ emissions",
+                    "as": "total_emissions"
+                }
+            ],
+            "groupby": ["Year_int"]
+        }
+    ],
+    "mark": "line",
+    "encoding": {
+        "x": {
+            "field": "Year_int",
+            "type": "quantitative",
+            "title": "Year",
+            "axis": {
+                "format": "d"
+            }
+        },
+        "y": {
+            "field": "total_emissions",
+            "type": "quantitative",
+            "title": "Annual CO₂ emissions (in tonnes)"
+        },
+        "tooltip": [
+            {
+                "field": "Year_int",
+                "type": "quantitative"
+            },
+            {
+                "field": "total_emissions",
+                "type": "quantitative"
+            }
+        ]
+    }
+}
+
