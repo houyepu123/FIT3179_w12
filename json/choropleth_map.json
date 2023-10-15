@@ -19,7 +19,7 @@
                   "lookup": "properties.NAME",
                   "from": {
                       "data": {
-                          "url": "../csv/cleaned_data.csv"
+                          "url": "cleaned_data.csv"
                       },
                       "key": "Entity",
                       "fields": ["Annual CO₂ emissions"]

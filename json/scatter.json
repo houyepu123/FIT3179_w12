@@ -4,7 +4,7 @@
     "height": 300,
     "description": "Annual CO₂ emissions (per capita) vs. GDP per capita for various countries in 2021",
     "data": {
-      "url": "../csv/cleaned_data.csv"
+      "url": "cleaned_data.csv"
     },
     "mark": "point",
     "encoding": {

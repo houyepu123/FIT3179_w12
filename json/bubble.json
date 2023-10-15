@@ -4,7 +4,7 @@
   "height": 300,
   "title": "GDP vs CO2 Emissions for 2021",
   "data": {
-    "url": "../csv/cleaned_data.csv"
+    "url": "cleaned_data.csv"
   },
   "transform": [
     {

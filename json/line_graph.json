@@ -4,7 +4,7 @@
     "width": 350,
     "height": 300,
     "data": {
-        "url": "../csv/annual-co2-emissions-per-country.csv",
+        "url": "annual-co2-emissions-per-country.csv",
         "format": {
             "type": "csv"
         }
