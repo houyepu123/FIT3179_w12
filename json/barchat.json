@@ -1,9 +1,11 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "title": "Annual CO2 emissions (per capita) - 2023",
     "hconcat": [
         {
+            "width": 290,
             "data": {
-                "url": "../csv/co2-emissions-vs-gdp_filter_2.csv"
+                "url": "../csv/cleaned_data.csv"
             },
             "transform": [
                 {
@@ -36,8 +38,9 @@
             "title": "Top 10 Countries by GDP per capita"
         },
         {
+            "width": 290,
             "data": {
-                "url": "../csv/co2-emissions-vs-gdp_filter_2.csv"
+                "url": "../csv/cleaned_data.csv"
             },
             "transform": [
                 {
@@ -58,13 +61,13 @@
                     "title": "Country"
                 },
                 "x": {
-                    "field": "Annual CO₂ emissions (per capita)",
+                    "field": "Annual CO₂ emissions",
                     "type": "quantitative",
                     "title": "CO₂ emissions (per capita)"
                 },
                 "tooltip": [
                     {"field": "Entity", "type": "nominal"},
-                    {"field": "Annual CO₂ emissions (per capita)", "type": "quantitative"}
+                    {"field": "Annual CO₂ emissions", "type": "quantitative"}
                 ]
             },
             "title": "Top 10 Countries by CO₂ emissions (per capita)"

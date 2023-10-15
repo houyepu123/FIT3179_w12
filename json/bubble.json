@@ -1,10 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 340,
-  "height": 450,
+  "width": 225,
+  "height": 300,
   "title": "GDP vs CO2 Emissions for 2018",
   "data": {
-    "url": "../csv/co2-emissions-vs-gdp_filter_2.csv"
+    "url": "../csv/cleaned_data.csv"
   },
   "transform": [
     {
@@ -42,7 +42,7 @@
           "axis": {"grid": false}
         },
         "y": {
-          "field": "Annual CO₂ emissions (per capita)",
+          "field": "Annual CO₂ emissions",
           "type": "quantitative",
           "title": "CO2 Emissions",
           "scale": {"type": "log"},
@@ -54,7 +54,7 @@
         },
         "tooltip": [
           {"field": "GDP per capita", "type": "quantitative"},
-          {"field": "Annual CO₂ emissions (per capita)", "type": "quantitative"},
+          {"field": "Annual CO₂ emissions", "type": "quantitative"},
           {"field": "Population (historical estimates)", "type": "quantitative"}
         ]
       }
@@ -68,12 +68,13 @@
       "mark": "text",
       "encoding": {
         "x": {"field": "GDP per capita", "type": "quantitative"},
-        "y": {"field": "Annual CO₂ emissions (per capita)", "type": "quantitative"},
+        "y": {"field": "Annual CO₂ emissions", "type": "quantitative"},
         "text": {"field": "Entity", "type": "nominal"}
       }
     }
   ]
 }
+
 
 
 

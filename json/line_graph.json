@@ -1,6 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "Global Annual CO₂ Emissions Over Time",
+    "width": 350,
+    "height": 300,
     "data": {
         "url": "../csv/annual-co2-emissions-per-country.csv",
         "format": {

@@ -21,8 +21,9 @@ body {
 /* In your styles.css or embedded styles */
 
 .vis-container {
-    width: 100%;
-    height: 300px;  /* Adjust this height as needed */
+     /* You can set styles specific to the map here */
+     border: 1px solid #ccc;
+     height: 300px; /* Example height, adjust as needed */
 }
 
 
@@ -32,7 +33,7 @@ h1 {
 }
 
 .description-right {
-    padding-left: 20px;
+    padding-left: 50px;
 }
 
 .description-left {

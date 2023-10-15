@@ -1,8 +1,10 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 420,
+    "height": 300,
     "description": "Scatter plot of Annual CO₂ emissions (per capita) vs. GDP per capita for various countries in 2018",
     "data": {
-      "url": "../csv/co2-emissions-vs-gdp_filter_2.csv"
+      "url": "../csv/cleaned_data.csv"
     },
     "mark": "point",
     "encoding": {
@@ -12,14 +14,15 @@
         "title": "GDP per capita"
       },
       "y": {
-        "field": "Annual CO₂ emissions (per capita)",
+        "field": "Annual CO₂ emissions",
         "type": "quantitative",
-        "title": "Annual CO₂ emissions (per capita)"
+        "title": "Annual CO₂ emissions",
+        "scale": {"type": "log"}
       },
       "tooltip": [
         {"field": "Entity", "type": "nominal", "title": "Country"},
         {"field": "GDP per capita", "type": "quantitative"},
-        {"field": "Annual CO₂ emissions (per capita)", "type": "quantitative"}
+        {"field": "Annual CO₂ emissions", "type": "quantitative"}
       ]
     }
   }
