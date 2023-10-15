@@ -46,11 +46,13 @@
         "tooltip": [
             {
                 "field": "Year_int",
-                "type": "quantitative"
+                "type": "quantitative","format": ",.0f",
+                "title": "Year"
             },
             {
                 "field": "total_emissions",
-                "type": "quantitative"
+                "type": "quantitative","format": ",.0f",
+                "title": "Total emissions"
             }
         ]
     }

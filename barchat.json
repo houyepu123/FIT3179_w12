@@ -69,7 +69,7 @@
           },
           "tooltip": [
             {"field": "Entity", "type": "nominal"},
-            {"field": "Annual CO₂ emissions", "type": "quantitative"}
+            {"field": "Annual CO₂ emissions", "type": "quantitative","format": ",.0f"}
           ]
         },
         "title": "Top 10 Countries by CO₂ emissions"

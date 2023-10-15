@@ -21,8 +21,8 @@
       },
       "tooltip": [
         {"field": "Entity", "type": "nominal", "title": "Country"},
-        {"field": "GDP per capita", "type": "quantitative"},
-        {"field": "Annual CO₂ emissions", "type": "quantitative"}
+        {"field": "GDP per capita", "type": "quantitative","format": ",.0f"},
+        {"field": "Annual CO₂ emissions", "type": "quantitative","format": ",.0f"}
       ]
     }
   }

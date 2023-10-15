@@ -53,9 +53,9 @@
           "type": "quantitative"
         },
         "tooltip": [
-          {"field": "GDP per capita", "type": "quantitative"},
-          {"field": "Annual CO₂ emissions", "type": "quantitative"},
-          {"field": "Population (historical estimates)", "type": "quantitative"}
+          {"field": "GDP per capita", "type": "quantitative","format": ",.0f"},
+          {"field": "Annual CO₂ emissions", "type": "quantitative","format": ",.0f"},
+          {"field": "Population (historical estimates)", "type": "quantitative","format": ",.0f","title":"Population"}
         ]
       }
     },
